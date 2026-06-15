@@ -19,12 +19,11 @@
 .hero {
   position: relative;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1581091215367-59ab6b3c4d62') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
 }
 
-/* OVERLAY */
 .overlay {
   position: absolute;
   width: 100%;
@@ -41,10 +40,11 @@
 }
 
 .logo img {
-  width: 110px;
+  width: 130px;
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.8));
 }
 
-/* HERO CONTENT */
+/* HERO TEXT */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -64,7 +64,7 @@
 }
 
 .btn {
-  background: #2c6e91;
+  background: #ff6a00;
   padding: 14px 24px;
   border-radius: 6px;
   color: white;
@@ -72,13 +72,13 @@
   font-weight: bold;
 }
 
-/* SERVICES */
+/* SECTION */
 .section {
   padding: 40px 20px;
   text-align: center;
-  background: #fff;
 }
 
+/* SERVICES */
 .card {
   background: #f5f5f5;
   padding: 20px;
@@ -86,9 +86,22 @@
   margin-bottom: 15px;
 }
 
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 /* QUOTE */
 .quote {
-  background: #2c6e91;
+  background: #111;
   padding: 40px 20px;
   color: white;
 }
@@ -105,8 +118,8 @@
 .quote button {
   width: 100%;
   padding: 12px;
-  background: white;
-  color: #2c6e91;
+  background: #ff6a00;
+  color: white;
   border: none;
   border-radius: 6px;
   font-weight: bold;
@@ -114,7 +127,7 @@
 
 /* FOOTER */
 .footer {
-  background: #111;
+  background: black;
   color: white;
   text-align: center;
   padding: 20px;
@@ -128,7 +141,6 @@
 
 <!-- HERO -->
 <div class="hero">
-
   <div class="overlay"></div>
 
   <div class="logo">
@@ -137,10 +149,9 @@
 
   <div class="hero-content">
     <h1>Air Conditioning & Refrigeration Experts</h1>
-    <p>Installation, servicing & repairs in Bishop’s Stortford</p>
+    <p>Bishop’s Stortford & surrounding areas</p>
     <a href="tel:07954411997" class="btn">Call Now</a>
   </div>
-
 </div>
 
 <!-- SERVICES -->
@@ -149,18 +160,30 @@
 
   <div class="card">
     <h3>Refrigeration Repairs</h3>
-    <p>Reliable repair and maintenance solutions.</p>
+    <p>Keep your systems running smoothly.</p>
   </div>
 
   <div class="card">
     <h3>Air Conditioning</h3>
-    <p>Installation and servicing for all systems.</p>
+    <p>Install, service & maintenance.</p>
   </div>
 
   <div class="card">
     <h3>Domestic Electrical</h3>
-    <p>Safe and professional home services.</p>
+    <p>Professional and safe solutions.</p>
   </div>
+</div>
+
+<!-- GALLERY -->
+<div class="section">
+  <h2>Our Work</h2>
+</div>
+
+<div class="gallery">
+  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+  <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
+  <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea">
+  <img src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f">
 </div>
 
 <!-- QUOTE -->
@@ -181,13 +204,11 @@
 <div class="footer">
   <p>📞 07954 411997</p>
   <p>📧 sjcoolingltd@gmail.com</p>
-  <p>📍 Bishop’s Stortford</p>
+  <p>📍 School Lane, Takeley, Bishop’s Stortford, CM22 6YL</p>
   <p>SJ Cooling Ltd (14999655)</p>
 </div>
 
 <script>
-
-// FORM SCRIPT
 document.getElementById("quoteForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -205,7 +226,6 @@ document.getElementById("quoteForm").addEventListener("submit", function(e) {
   document.getElementById("msg").innerText =
     "Opening email... press send to complete your request.";
 });
-
 </script>
 
 </body>
