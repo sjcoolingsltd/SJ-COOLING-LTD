@@ -1,62 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SJ Cooling Ltd</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SJ Cooling Ltd</title>
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+              url('https://images.unsplash.com/photo-1581091215367-59ab6b3c4d62');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2c6e91;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #2c6e91;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.service-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.service-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* WHY CHOOSE US */
+.why {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.why-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.why-card h3 {
+  color: #2c6e91;
+  margin-bottom: 10px;
+}
+
+/* INFO */
+.info {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+.info a {
+  color: #4fc3f7;
+  text-decoration: none;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" alt="SJ Cooling Logo" class="logo">
-  <h1>SJ Cooling Ltd</h1>
-  <p>Stay in control</p>
-</header>
-
-<nav>
-  <a href="#">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
-
+<!-- HERO -->
 <section class="hero">
-  <h2>Professional Air Conditioning Services</h2>
-  <p>Reliable installation, servicing & repairs you can trust</p>
+  <h1>SJ COOLING LTD</h1>
+
+  <p>
+    Professional air conditioning and refrigeration services in Bishop’s Stortford.
+  </p>
+
+  <p>
+    Reliable, efficient, and affordable solutions for homes and businesses.
+  </p>
+
+  <a href="tel:07954411997" class="hero-btn">Call Now</a>
 </section>
 
-<section id="about" class="about">
-  <h2>About Us</h2>
+<!-- SERVICES -->
+<section class="services">
+  <h2>OUR SERVICES</h2>
+  <p class="subtitle">What We Offer</p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3>REFRIGERATION REPAIRS</h3>
+      <p>Keep your systems running smoothly with expert repair services.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>AIR CONDITIONING</h3>
+      <p>Efficient AC repair and maintenance for year-round comfort.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>DOMESTIC ELECTRICAL</h3>
+      <p>Safe and professional electrical services for your home.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <h2>WHY CHOOSE US</h2>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <h3>Wide Range of Services</h3>
+      <p>Installations, maintenance, and repairs all in one place.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Certified Professionals</h3>
+      <p>Fully qualified and insured engineers you can trust.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Quality & Reliability</h3>
+      <p>We use trusted equipment for long-lasting performance.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Tailored Solutions</h3>
+      <p>Custom services to suit your needs and budget.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="info">
+  <p>📞 <a href="tel:07954411997">07954 411997</a></p>
+
+  <p>SJ Cooling Ltd (Company No: 14999655)</p>
+
   <p>
-    Our team is made up of fully qualified and insured technicians who are committed to delivering the highest standard of service to every customer. We take great pride in the quality of our workmanship and the professionalism we bring to every project, no matter the size or complexity. With many years of hands-on experience in the industry, our technicians have developed the skills and knowledge needed to handle a wide range of air conditioning systems with confidence and precision. We believe that staying up to date is essential in a fast-moving industry, which is why our team regularly undergoes ongoing training to keep up with the latest advancements in air conditioning technology. This allows us to offer modern, energy-efficient solutions that not only improve performance but can also help reduce running costs for our customers. From installation to maintenance and repairs, we apply the latest techniques and best practices to ensure optimal results every time. Customer satisfaction is at the heart of everything we do, and we understand that every home and business has unique cooling requirements, so we take the time to listen carefully and provide tailored solutions that meet your specific needs. Our technicians work efficiently and respectfully, ensuring minimal disruption while maintaining a clean and safe working environment at all times. When you choose our services, you can have complete peace of mind knowing that your system is in capable and experienced hands, as our certified professionals are dedicated to delivering reliable, efficient, and long-lasting solutions that you can depend on for years to come.
+    📍 <a href="https://www.google.com/maps/search/?api=1&query=CM22+6YL" target="_blank">
+      School Lane Cottages, Takeley, Bishop's Stortford, CM22 6YL
+    </a>
   </p>
 </section>
-
-<section id="services" class="services">
-  <h2>Our Services</h2>
-  <div>
-    <h3>Air Conditioning</h3>
-    <p>Installation, servicing and repairs</p>
-  </div>
-  <div>
-    <h3>Refrigeration</h3>
-    <p>Cold rooms, freezers and maintenance</p>
-  </div>
-  <div>
-    <h3>Electrical</h3>
-    <p>Domestic and commercial services</p>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>Phone: 07XXX XXX XXX</p>
-  <p>Email: info@sjcoolingltd.co.uk</p>
-</section>
-
-<footer>
-  <p>© 2026 SJ Cooling Ltd</p>
-</footer>
 
 </body>
 </html>
