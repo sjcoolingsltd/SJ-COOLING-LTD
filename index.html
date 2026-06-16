@@ -1,118 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #000;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SJ Cooling Ltd</title>
 
-/* HERO FULL SCREEN */
-.hero {
-  height: 100vh;
-  background: url("hero-bg.png") no-repeat center center/cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+<link rel="stylesheet" href="style.css">
+</head>
 
-/* DARK GLASS OVERLAY */
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.8)
-  );
-}
+<body>
 
-/* CONTENT */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding: 20px;
-}
+<!-- HERO -->
+<section class="hero">
 
-/* LOGO */
-.logo {
-  width: 90px;
-  margin-bottom: 10px;
-}
+  <div class="hero-content">
 
-/* TEXT */
-h1 {
-  font-size: 24px;
-  margin: 5px 0;
-}
+    <img src="logo.png" class="logo" alt="SJ Cooling Ltd Logo">
 
-p {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
+    <h1>SJ Cooling Ltd</h1>
+    <p>Air Conditioning & Refrigeration Specialists</p>
 
-/* CALL BUTTON */
-.call-btn {
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  padding: 14px 26px;
-  border-radius: 12px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
+    <!-- WORKING CALL BUTTON -->
+    <a href="tel:+447954411997" class="call-btn">📞 Call Now</a>
 
-/* SCROLL ICON */
-.scroll-down {
-  position: absolute;
-  bottom: 20px;
-  color: white;
-  font-size: 22px;
-  animation: bounce 1.5s infinite;
-}
+  </div>
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
+  <div class="scroll-down">⌄</div>
 
-/* SERVICES */
-.services {
-  padding: 30px 20px;
-  background: #0d1117;
-  color: white;
-  text-align: center;
-}
+</section>
 
-.card {
-  background: #161b22;
-  margin: 10px auto;
-  padding: 15px;
-  border-radius: 12px;
-  max-width: 350px;
-}
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Services</h2>
 
-/* SLIDER */
-.slider {
-  padding: 30px 20px;
-  background: #000;
-  color: white;
-  text-align: center;
-}
+  <div class="card">❄️ Air Conditioning Installation</div>
+  <div class="card">🛠 Service & Maintenance</div>
+  <div class="card">🧊 Refrigeration Systems</div>
+  <div class="card">⚡ Domestic Electrical Services</div>
+</section>
 
-.slider-container {
-  max-width: 350px;
-  margin: auto;
-}
+<!-- INSTALL SLIDER -->
+<section class="slider">
+  <h2>Recent Installs</h2>
 
-.slide {
-  width: 100%;
-  display: none;
-  border-radius: 12px;
-}
+  <div class="slider-container">
+    <img src="install1.jpg" class="slide active">
+    <img src="install2.jpg" class="slide">
+    <img src="install3.jpg" class="slide">
+  </div>
+</section>
 
-.slide.active {
-  display: block;
-}
+<!-- SCRIPT -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let i = 0;
+
+setInterval(() => {
+  slides.forEach(s => s.classList.remove("active"));
+  slides[i].classList.add("active");
+  i = (i + 1) % slides.length;
+}, 3000);
+</script>
+
+</body>
+</html>
