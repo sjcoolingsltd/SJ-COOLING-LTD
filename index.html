@@ -3,229 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SJ Cooling Ltd | Air Conditioning Bishop’s Stortford</title>
+<title>SJ Cooling Ltd</title>
 
 <style>
-
-/* RESET */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-  position: relative;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4') center/cover no-repeat;
+  background: url("hero-bg.jpg") no-repeat center center/cover;
   display: flex;
-  align-items: flex-end;
 }
 
+/* DARK OVERLAY */
 .overlay {
-  position: absolute;
+  background: rgba(0, 0, 0, 0.65);
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
 /* LOGO */
 .logo {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  z-index: 2;
-}
-
-.logo img {
   width: 120px;
-}
-
-/* HERO TEXT */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  padding: 25px;
-}
-
-.hero-content h1 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 14px;
   margin-bottom: 15px;
 }
 
-.btn {
-  display: inline-block;
-  background: #ff6a00;
-  padding: 12px 20px;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+/* TEXT */
+h1 {
+  font-size: 28px;
+  margin: 10px 0;
 }
 
-/* SERVICES */
-.section {
-  padding: 35px 20px;
+p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 14px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* SERVICES SECTION */
+.services {
+  background: #0d1117;
+  color: white;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.card {
-  background: #f4f4f4;
-  padding: 18px;
-  border-radius: 8px;
-  margin-bottom: 12px;
+.services h2 {
+  margin-bottom: 25px;
 }
 
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+.service-box {
+  margin-bottom: 20px;
   padding: 15px;
+  background: #161b22;
+  border-radius: 10px;
 }
 
-.gallery img {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* QUOTE */
+/* QUOTE SECTION */
 .quote {
-  background: #111;
-  padding: 35px 20px;
-  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  background: #f5f5f5;
 }
 
-.quote input,
-.quote textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 8px;
-  border-radius: 5px;
-  border: none;
+.quote input, .quote textarea {
+  width: 90%;
+  max-width: 400px;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 .quote button {
-  width: 100%;
-  padding: 12px;
-  background: #ff6a00;
+  background: #0072ff;
   color: white;
+  padding: 12px 25px;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 10px;
 }
-
-/* FOOTER */
-.footer {
-  background: black;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  font-size: 12px;
-}
-
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="overlay"></div>
+<section class="hero">
+  <div class="overlay">
+    <img src="logo.png" class="logo" alt="SJ Cooling Ltd">
 
-  <div class="logo">
-    <img src="logo.png" alt="SJ Cooling Ltd">
-  </div>
+    <h1>SJ Cooling Ltd</h1>
+    <p>Air Conditioning & Refrigeration Specialists</p>
 
-  <div class="hero-content">
-    <h1>Air Conditioning & Refrigeration Specialists</h1>
-    <p>Bishop’s Stortford • Hertfordshire • Surrounding Areas</p>
-    <a href="tel:07954411997" class="btn">Call 07954 411997</a>
+    <a href="tel:07954411997" class="btn">📞 Call Now</a>
   </div>
-</div>
+</section>
 
 <!-- SERVICES -->
-<div class="section">
+<section class="services">
   <h2>Our Services</h2>
 
-  <div class="card">
-    <h3>Refrigeration Repairs & Maintenance</h3>
-    <p>Keeping your systems running efficiently all year round.</p>
-  </div>
+  <div class="service-box">❄️ Air Conditioning Installation</div>
+  <div class="service-box">🛠 Service & Maintenance</div>
+  <div class="service-box">🧊 Refrigeration Systems</div>
+  <div class="service-box">⚡ Domestic Electrical Services</div>
+</section>
 
-  <div class="card">
-    <h3>Air Conditioning Installation & Servicing</h3>
-    <p>Professional installation and maintenance for all systems.</p>
-  </div>
+<!-- QUOTE FORM -->
+<section class="quote">
+  <h2>Get a Free Quote</h2>
 
-  <div class="card">
-    <h3>Domestic Electrical Services</h3>
-    <p>Reliable and safe electrical work for your home.</p>
-  </div>
-</div>
+  <input type="text" placeholder="Your Name"><br>
+  <input type="tel" placeholder="Phone Number"><br>
+  <textarea placeholder="What do you need?"></textarea><br>
 
-<!-- GALLERY -->
-<div class="section">
-  <h2>Recent Work</h2>
-</div>
-
-<div class="gallery">
-  <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4">
-  <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
-  <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea">
-  <img src="https://images.unsplash.com/photo-1599696848652-f0ff23bc911f">
-</div>
-
-<!-- QUOTE -->
-<div class="quote">
-  <h2 style="text-align:center;">Get a Free Quote</h2>
-
-  <form id="quoteForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="tel" id="phone" placeholder="Contact Number" required>
-    <textarea id="message" placeholder="Tell us about your job..." required></textarea>
-    <button type="submit">Request Quote</button>
-  </form>
-
-  <p id="msg" style="text-align:center;"></p>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <p>📞 07954 411997</p>
-  <p>📍 Takeley, Bishop’s Stortford, Hertfordshire, CM22 6YL</p>
-  <p>SJ Cooling Ltd • Company No: 14999655</p>
-</div>
-
-<script>
-document.getElementById("quoteForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let message = document.getElementById("message").value;
-
-  let body = "Name: " + name + "%0A" +
-             "Phone: " + phone + "%0A" +
-             "Job: " + message;
-
-  window.location.href =
-    "mailto:sjcoolingltd@gmail.com?subject=Quote Request&body=" + body;
-
-  document.getElementById("msg").innerText =
-    "Opening email… please press send to complete your request.";
-});
-</script>
+  <button>Request Quote</button>
+</section>
 
 </body>
 </html>
