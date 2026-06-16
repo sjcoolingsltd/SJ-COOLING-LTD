@@ -50,10 +50,41 @@
   <h2>Get a Free Quote</h2>
   <p>For Air Conditioning & Refrigeration Services</p>
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <textarea placeholder="Describe your job (install, repair, service...)"></textarea>
+  <form id="quoteForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+
+    <select id="system" required>
+      <option value="">Select System Type</option>
+
+      <option>Wall Mounted Split System</option>
+      <option>Multi Split System</option>
+      <option>Ducted Air Conditioning</option>
+      <option>Floor Mounted Unit</option>
+      <option>Ceiling Suspended Unit</option>
+      <option>Cassette Ceiling Unit</option>
+      <option>Portable Air Conditioner</option>
+
+      <option>VRF / VRV System</option>
+      <option>Packaged Rooftop Unit (RTU)</option>
+      <option>Air Handling Unit (AHU)</option>
+      <option>Fan Coil Units (FCU)</option>
+
+      <option>Chiller System (Air Cooled)</option>
+      <option>Chiller System (Water Cooled)</option>
+
+      <option>Cold Room / Walk-in Fridge</option>
+      <option>Freezer Room</option>
+      <option>Display Refrigeration</option>
+      <option>Bottle Coolers / Under Counter Fridges</option>
+
+      <option>Ventilation / Extraction Systems</option>
+      <option>Heat Pump Systems</option>
+
+      <option>Not Sure (Need Advice)</option>
+    </select>
+
+    <textarea id="details" placeholder="Describe your job (install, repair, service...)"></textarea>
 
     <button type="submit">Request Quote</button>
   </form>
@@ -74,6 +105,36 @@ setInterval(() => {
   slides[i].classList.add("active");
   i = (i + 1) % slides.length;
 }, 3000);
+</script>
+
+<!-- QUOTE FORM SCRIPT -->
+<script>
+document.getElementById("quoteForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let system = document.getElementById("system").value;
+  let details = document.getElementById("details").value.trim();
+
+  if (!name || !phone || !system) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  let subject = encodeURIComponent("New Quote Request - SJ Cooling Ltd");
+
+  let body = encodeURIComponent(
+    "New Quote Request:\n\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "System Type: " + system + "\n\n" +
+    "Job Details:\n" + details
+  );
+
+  window.location.href =
+    "mailto:sjcoolingltd@gmail.com?subject=" + subject + "&body=" + body;
+});
 </script>
 
 </body>
