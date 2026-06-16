@@ -10,19 +10,20 @@
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="overlay">
-    <img src="logo.png" class="logo">
+<!-- HERO (YOUR IMAGE) -->
+<section class="hero"></section>
 
-    <h1>SJ Cooling Ltd</h1>
-    <p>Air Conditioning & Refrigeration Specialists</p>
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Services</h2>
 
-    <a href="tel:07954411997" class="btn">Call Now</a>
-  </div>
+  <div class="service-box">❄️ Air Conditioning Installation</div>
+  <div class="service-box">🛠 Service & Maintenance</div>
+  <div class="service-box">🧊 Refrigeration Systems</div>
+  <div class="service-box">⚡ Domestic Electrical Services</div>
 </section>
 
-<!-- SLIDER -->
+<!-- INSTALL SLIDER -->
 <section class="slider">
   <h2>Recent Installations</h2>
 
@@ -33,19 +34,28 @@
   </div>
 </section>
 
+<!-- QUOTE -->
+<section class="quote">
+  <h2>Get a Free Quote</h2>
+
+  <input type="text" placeholder="Your Name">
+  <input type="tel" placeholder="Phone Number">
+  <textarea placeholder="What do you need?"></textarea>
+
+  <button>Request Quote</button>
+</section>
+
 <!-- SCRIPT -->
 <script>
 let slides = document.querySelectorAll(".slide");
 let index = 0;
 
 function showSlide() {
-  slides.forEach((slide) => slide.classList.remove("active"));
+  slides.forEach(slide => slide.classList.remove("active"));
   slides[index].classList.add("active");
 
   index++;
-  if (index >= slides.length) {
-    index = 0;
-  }
+  if (index >= slides.length) index = 0;
 }
 
 setInterval(showSlide, 3000);
